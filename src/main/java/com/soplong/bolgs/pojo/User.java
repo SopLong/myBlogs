@@ -37,4 +37,9 @@ public class User implements Serializable {
      * 是否可用 【1】有效，【0】无效
      */
     private Integer isEffective;
+
+    /**
+     * 头像
+     */
+    private String profile;
 }
