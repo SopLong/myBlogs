@@ -1,6 +1,8 @@
-package com.soplong.bolgs.pojo;
+package com.soplong.bolgs.pojo.blog;
 
 import lombok.Data;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 import java.io.Serializable;
 import java.util.Date;

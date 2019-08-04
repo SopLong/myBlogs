@@ -42,3 +42,12 @@ mybatis-plus:
   configuration:
     map-underscore-to-camel-case: true
     cache-enabled: true
+# 自定义
+project: springboot-logback
+pattern: "%d{yyyy-MM-dd HH:mm:ss.SSS} |-%-5level [%thread] %c [%L] -| %msg%n"
+path: D:\logs\logback\
+
+# 日志相关配置
+logging:
+  level:
+    com.soplong.bolgs: debug
