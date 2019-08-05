@@ -1,5 +1,8 @@
 package com.soplong.bolgs.pojo;
 
+import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.enums.IdType;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -11,6 +14,7 @@ import java.util.Date;
 @Data
 public class WorkPointRecord implements Serializable {
 
+    @TableId(value = "id",type = IdType.AUTO)
     private Integer id;
 
     private String dateTime;
@@ -30,4 +34,9 @@ public class WorkPointRecord implements Serializable {
     private Date updatetime;
 
     private Integer delFlag;
+
+    /**
+     * 是否是周末 【0】不是 【1】是
+     */
+    private Integer isWeek;
 }
