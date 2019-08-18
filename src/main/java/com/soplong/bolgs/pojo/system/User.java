@@ -1,4 +1,4 @@
-package com.soplong.bolgs.pojo.blog;
+package com.soplong.bolgs.pojo.system;
 
 import lombok.Data;
 import org.springframework.context.annotation.Bean;

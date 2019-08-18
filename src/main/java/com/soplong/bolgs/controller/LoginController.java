@@ -1,7 +1,7 @@
 package com.soplong.bolgs.controller;
 
 import com.soplong.bolgs.constant.ResultCode;
-import com.soplong.bolgs.pojo.blog.User;
+import com.soplong.bolgs.pojo.system.User;
 import com.soplong.bolgs.pojo.system.ResultData;
 import com.soplong.bolgs.service.UserService;
 import org.apache.shiro.SecurityUtils;

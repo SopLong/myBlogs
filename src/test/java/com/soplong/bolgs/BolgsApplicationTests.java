@@ -1,5 +1,7 @@
 package com.soplong.bolgs;
 
+import com.soplong.bolgs.constant.shiro.ShiroConfig;
+import org.apache.shiro.crypto.hash.SimpleHash;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +21,11 @@ public class BolgsApplicationTests {
 
     @Test
     public void contextLoads() {
-
-        System.out.println(ioc.containsBean("hello"));
+        String hashAlgorithmName = "MD5";
+        String credentials = "123456";
+        int hashIterations = 1024;
+        Object obj = new SimpleHash(hashAlgorithmName, credentials,"",hashIterations);
+        System.out.println(obj.toString());
     }
 
 }
