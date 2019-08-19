@@ -21,5 +21,5 @@ public class ArticleContent implements Serializable {
     /**
      * 文章ID
      */
-    private String articleId;
+    private Integer articleId;
 }

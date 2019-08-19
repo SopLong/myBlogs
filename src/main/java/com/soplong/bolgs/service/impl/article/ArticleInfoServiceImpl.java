@@ -12,4 +12,9 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ArticleInfoServiceImpl extends ServiceImpl<ArticleInfoMapper, ArticleInfo> implements ArticleInfoService {
+    @Override
+    public ArticleInfo addArticle(ArticleInfo articleInfo) {
+        this.insert(articleInfo);
+        return articleInfo;
+    }
 }

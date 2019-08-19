@@ -12,4 +12,8 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ArticleContentServiceImpl extends ServiceImpl<ArticleContentMapper, ArticleContent> implements ArticleContentService {
+    @Override
+    public void addArticleContent(ArticleContent articleContent) {
+        this.insert(articleContent);
+    }
 }
