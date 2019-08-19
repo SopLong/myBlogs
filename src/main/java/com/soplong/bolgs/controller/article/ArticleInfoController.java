@@ -1,5 +1,6 @@
 package com.soplong.bolgs.controller.article;
 
+import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.plugins.Page;
 import com.soplong.bolgs.annotation.Log;
 import com.soplong.bolgs.pojo.article.ArticleContent;
@@ -33,7 +34,7 @@ public class ArticleInfoController {
      * @param articleInfoDto
      * @return
      */
-    @Log("新增博客")
+//    @Log("新增博客")
     @PostMapping("addArticle")
     public ResultData addArticle(@RequestBody ArticleInfoDto articleInfoDto){
         ArticleInfo articleInfo = new ArticleInfo();
@@ -58,5 +59,16 @@ public class ArticleInfoController {
         page.setSize(Integer.parseInt(reqMap.get("size")));
         page.setCurrent(Integer.parseInt(reqMap.get("page")));
         return new ResultData(articleInfoService.getArticleList(reqMap,page));
+    }
+
+    /**
+     * 删除博客文章
+     * @param id
+     * @return
+     */
+    @GetMapping("deleteArticle/{id}")
+    public ResultData deleteArticle(@PathVariable String id){
+        articleInfoService.updateForSet("del_flag = 1",new EntityWrapper<ArticleInfo>().eq("id",id));
+        return new ResultData();
     }
 }
