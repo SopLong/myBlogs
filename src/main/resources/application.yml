@@ -51,3 +51,11 @@ path: D:\logs\logback\
 logging:
   level:
     com.soplong.bolgs: debug
+# 七牛云配置
+# bucket是创建的存储空间名
+# path对应存储空间的访问域名
+qiniu:
+  accessKey: zHy3Im3Yjxxxxxx
+  secretKey: LQR4mszxxxxxxxx
+  bucket: xyz
+  path: http://xxx.bkt.clouddn.com

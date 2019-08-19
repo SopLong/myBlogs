@@ -1,4 +1,4 @@
-package com.soplong.bolgs.service.impl.system;
+package com.soplong.bolgs.service.system.impl;
 
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import com.soplong.bolgs.mapper.system.SysCodeMapper;

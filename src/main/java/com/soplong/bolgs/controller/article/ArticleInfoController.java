@@ -1,18 +1,24 @@
 package com.soplong.bolgs.controller.article;
 
+import com.baomidou.mybatisplus.plugins.Page;
+import com.soplong.bolgs.annotation.Log;
 import com.soplong.bolgs.pojo.article.ArticleContent;
 import com.soplong.bolgs.pojo.article.ArticleInfo;
 import com.soplong.bolgs.pojo.system.ResultData;
 import com.soplong.bolgs.service.article.ArticleContentService;
 import com.soplong.bolgs.service.article.ArticleInfoService;
 import com.soplong.bolgs.pojo.article.dto.ArticleInfoDto;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Map;
+
 /**
  * Created by SopLong on 2019/8/18.
  */
+@Slf4j
 @RestController
 @RequestMapping("article")
 public class ArticleInfoController {
@@ -27,6 +33,7 @@ public class ArticleInfoController {
      * @param articleInfoDto
      * @return
      */
+    @Log("新增博客")
     @PostMapping("addArticle")
     public ResultData addArticle(@RequestBody ArticleInfoDto articleInfoDto){
         ArticleInfo articleInfo = new ArticleInfo();
@@ -38,5 +45,18 @@ public class ArticleInfoController {
         articleContent.setArticleId(article.getId());
         articleContentService.addArticleContent(articleContent);
         return new ResultData();
+    }
+
+    /**
+     * 查询博文列表
+     * @param reqMap
+     * @return
+     */
+    @PostMapping("getArticleList")
+    public ResultData getArticleList(@RequestBody Map<String,String> reqMap){
+        Page page = new Page();
+        page.setSize(Integer.parseInt(reqMap.get("size")));
+        page.setCurrent(Integer.parseInt(reqMap.get("page")));
+        return new ResultData(articleInfoService.getArticleList(reqMap,page));
     }
 }

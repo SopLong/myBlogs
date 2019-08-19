@@ -1,4 +1,4 @@
-package com.soplong.bolgs.service.impl.article;
+package com.soplong.bolgs.service.article.impl;
 
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import com.soplong.bolgs.mapper.article.ArticleContentMapper;

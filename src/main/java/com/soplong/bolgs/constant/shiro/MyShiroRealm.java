@@ -2,7 +2,7 @@ package com.soplong.bolgs.constant.shiro;
 
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.soplong.bolgs.pojo.system.User;
-import com.soplong.bolgs.service.UserService;
+import com.soplong.bolgs.service.system.impl.UserService;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;

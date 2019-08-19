@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.soplong.bolgs.mapper.article.ArticleInfoMapper">
+
+    <select id="getArticleList" parameterType="map" resultType="com.soplong.bolgs.pojo.article.dto.ArticleInfoDto">
+        SELECT
+            info.id,
+            info.title,
+            info.summary,
+            info.is_top,
+            info.traffic,
+            info.createtime,
+            content.content
+        FROM
+            article_info info
+            JOIN article_content content ON content.article_id = info.id
+        WHERE
+            info.del_flag = 0
+        <if test="keyWords != null and keyWords != ''">
+            and (
+              info.title like concat('%',#{keyWords},'%')
+              or info.summary like concat('%',#{keyWords},'%')
+            )
+        </if>
+    </select>
+
+</mapper>

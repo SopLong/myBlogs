@@ -1,4 +1,4 @@
-package com.soplong.bolgs.service;
+package com.soplong.bolgs.service.system.impl;
 
 import com.baomidou.mybatisplus.service.IService;
 import com.soplong.bolgs.pojo.system.User;
