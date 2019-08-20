@@ -1,13 +1,11 @@
-package com.soplong.bolgs.constant.shiro;
+package com.soplong.bolgs.config.shiro;
 
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
-import org.apache.shiro.crypto.hash.SimpleHash;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.apache.shiro.mgt.SecurityManager;
-import sun.security.provider.MD5;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -28,6 +26,7 @@ public class ShiroConfig {
         filterChainDefinitionMap.put("/favicon.ico", "anon");//网站图标
         filterChainDefinitionMap.put("/LoginController/**", "anon");
         filterChainDefinitionMap.put("/workPoint/**", "anon");
+        filterChainDefinitionMap.put("/JspController/**", "anon");
         filterChainDefinitionMap.put("/**", "authc");
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
         return shiroFilterFactoryBean;

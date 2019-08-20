@@ -1,5 +1,7 @@
 server:
   port: 8080
+  tomcat:
+    uri-encoding: UTF-8
 debug: false
 spring:
   datasource:
@@ -26,6 +28,7 @@ spring:
     date-format: yyyy-MM-dd
     joda-date-time-format: yyyy-MM-dd hh:mm:ss
     time-zone: GMT+8
+
 #mybaits-plus配置，修改主键类型，mapper.xml、type 别名等
 mybatis-plus:
   # 配置扫描xml

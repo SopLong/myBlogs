@@ -34,7 +34,7 @@ public class ArticleInfoController {
      * @param articleInfoDto
      * @return
      */
-//    @Log("新增博客")
+    @Log("新增博客")
     @PostMapping("addArticle")
     public ResultData addArticle(@RequestBody ArticleInfoDto articleInfoDto){
         ArticleInfo articleInfo = new ArticleInfo();

@@ -1,4 +1,4 @@
-package com.soplong.bolgs.constant.shiro;
+package com.soplong.bolgs.config.shiro;
 
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.soplong.bolgs.pojo.system.User;
