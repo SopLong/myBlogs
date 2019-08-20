@@ -25,8 +25,8 @@ public class ShiroConfig {
         //anon. 配置不会被拦截的请求，auth配置需要认证的请求 顺序判断
         filterChainDefinitionMap.put("/favicon.ico", "anon");//网站图标
         filterChainDefinitionMap.put("/LoginController/**", "anon");
-        filterChainDefinitionMap.put("/workPoint/**", "anon");
-        filterChainDefinitionMap.put("/JspController/**", "anon");
+        filterChainDefinitionMap.put("/front/**", "anon");
+        filterChainDefinitionMap.put("/static/**", "anon");
         filterChainDefinitionMap.put("/**", "authc");
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
         return shiroFilterFactoryBean;

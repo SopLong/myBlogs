@@ -7,10 +7,15 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-    @RequestMapping("JspController")
+    @RequestMapping("front")
 public class JspController {
     @GetMapping("/index")
     public String index() {
         return "index";
+    }
+
+    @GetMapping("/gustbook")
+    public String gustbook() {
+        return "gustbook";
     }
 }
