@@ -66,9 +66,9 @@
                 </div>
                 <!-- TOP ICONS -->
                 <ul class="eskimo-top-icons">
-                    <li id="eskimo-panel-icon">
-                        <a href="#eskimo-panel" class="eskimo-panel-open"><i class="fa fa-bars"></i></a>
-                    </li>
+                    <!--<li id="eskimo-panel-icon">-->
+                        <!--<a href="#eskimo-panel" class="eskimo-panel-open"><i class="fa fa-bars"></i></a>-->
+                    <!--</li>-->
                     <li id="eskimo-search-icon">
                         <a id="eskimo-open-search" href="#"><i class="fa fa-search"></i></a>
                     </li>
@@ -80,16 +80,13 @@
                         <div class="eskimo-masonry-grid">
                             <div class="eskimo-one-column" data-columns>
                                 <!-- POST 1 -->
-                                <div class="card-masonry" th:each="article : ${aracleInfo.data}">
+                                <div class="card-masonry" th:each="article : ${articleInfos}">
                                     <div class="card">
-                                        <a href="singlePost">
+                                        <a th:href="@{${'singlePost'}(id=${article.id})}">
                                             <img class="card-vertical-img" th:src="${article.imgUrl}" alt="Ketchup Flavored Ice Cream!" />
                                         </a>
                                         <div class="card-border">
                                             <div class="card-body">
-                                                <div class="card-category">
-                                                    <span><a href="category.html">Food &amp; Drink</a></span>
-                                                </div>
                                                 <h3 class="card-title">
                                                     <a href="singlePost" th:text="${article.title}"></a>
                                                 </h3>
@@ -111,10 +108,12 @@
                         </div>
                         <div class="eskimo-pager">
                             <ul class='pagination flex-wrap'>
-                                <li class='page-item active'><a class='page-link' href='#'>i</a></li>
-                                <li class='page-item'><a class='page-link' href='#'>2</a></li>
-                                <li class='page-item'><a class='page-link' href='#'>3</a></li>
-                                <li class='page-item'><a class='page-link' href="#"><i class="fa fa-chevron-right"></i></a></li>
+                                <li class='page-item'  th:each="pageNo : ${#numbers.sequence(1, total)}">
+                                    <a th:if="${currentPage eq pageNo}" class="page-link active" href="javascript:void(0);" th:text="${pageNo}"></a>
+                                    <a th:if="${not (currentPage eq pageNo)}" class="page-link active" th:href="@{${'index'}(pageNum=${pageNo},pageSize=${pageSize})}" th:text="${pageNo}"></a>
+                                <!--<li class='page-item'><a class='page-link' th:href="@{${'index'}(pageNum=${pageNo+1},pageSize=${pageSize})}"><i class="fa fa-chevron-right"></i></a></li>-->
+                                </li>
+
                             </ul>
                         </div>
                     </div>

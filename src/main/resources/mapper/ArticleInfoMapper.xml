@@ -10,7 +10,8 @@
             info.is_top,
             info.traffic,
             info.createtime,
-            content.content
+            content.content,
+            img_url
         FROM
             article_info info
             JOIN article_content content ON content.article_id = info.id
