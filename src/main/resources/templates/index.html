@@ -1,192 +1,305 @@
-<!doctype html>
-<html lang="zh" xmlns:th="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en-US">
 
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<title>响应式简单个性个人博客模板</title>
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<link rel="stylesheet" type="text/css" href="../static/css/index.css" media="all" />
-	</head>
 
-	<body class="home blog custom-background round-avatars">
-		<div class="Yarn_Background" style="background-image: url( ../static/images/47fb3c_.jpg);"></div>
-		<form class="js-search search-form search-form--modal" method="get" action="search" role="search">
-			<div class="search-form__inner">
-				<div>
-					<div id="search-container" class="ajax_search">
-						<form method="get" id="searchform" action="">
-							<div class="filter_container"><input type="text" value="" autocomplete="off" placeholder="Type then select or enter" name="s" id="search-input" />
-								<ul id="search_filtered" class="search_filtered"></ul>
-							</div>
-							<input type="submit" name="submit" id="searchsubmit" class="searchsubmit" value="" />
-						</form>
-					</div>
-				</div>
-			</div>
-		</form>
-		<div class="navi" data-aos="fade-down">
-			<div class="bt-nav">
-				<div class="line line1"></div>
-				<div class="line line2"></div>
-				<div class="line line3"></div>
-			</div>
-			<div class="navbar animated fadeInRight">
-				<div class="inner">
-					<nav id="site-navigation" class="main-navigation">
-						<div id="main-menu" class="main-menu-container">
-							<div class="menu-menu-container">
-								<ul id="primary-menu" class="menu">
-									<li id="menu-item-17" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-17">
-										<a href="index">首页</a>
-									</li>
-									<li id="menu-item-173" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-173">
-										<a href="update">更新</a>
-									</li>
-									<li id="menu-item-78" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78">
-										<a href="link">链接</a>
-									</li>
-									<li id="menu-item-252" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-252">
-										<a href="archives">归档</a>
-										<ul class="sub-menu">
-											<li id="menu-item-165" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-165">
-												<a href="">theme</a>
-											</li>
-											<li id="menu-item-163" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-163">
-												<a href="">Happen</a>
-											</li>
-											<li id="menu-item-924" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-924">
-												<a href="">WeWork</a>
-											</li>
-											<li id="menu-item-164" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-164">
-												<a href="">WordPress</a>
-											</li>
-										</ul>
-									</li>
-									<li id="menu-item-57" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57">
-										<a href="gustbook">留言</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</nav>
-					<!-- #site-navigation -->
-				</div>
-			</div>
-		</div>
-		<div class="hebin" data-aos="fade-down">
-			<i class=" js-toggle-search iconfont">&#xe60e;</i>
-		</div>
-		<header id="masthead" class="overlay animated from-bottom" itemprop="brand">
-			<div class="site-branding text-center">
-				<a href="">
-					<figure>
-						<img class="custom-logo avatar" src="../static/images/omikron.png" />
-					</figure>
-				</a>
-				<h3 class="blog-description"><p>This is beauty</p></h3>
-			</div>
-			<!-- .site-branding -->
-			<div class="decor-part">
-				<div id="particles-js"></div>
-			</div>
-			<div class="animation-header">
-				<div class="decor-wrapper">
-					<svg id="header-decor" class="decor bottom" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100" preserveAspectRatio="none">
-						<path class="large left" d="M0 0 L50 50 L0 100" fill="rgba(255,255,255, .1)"></path>
-						<path class="large right" d="M100 0 L50 50 L100 100" fill="rgba(255,255,255, .1)"></path>
-						<path class="medium left" d="M0 100 L50 50 L0 33.3" fill="rgba(255,255,255, .3)"></path>
-						<path class="medium right" d="M100 100 L50 50 L100 33.3" fill="rgba(255,255,255, .3)"></path>
-						<path class="small left" d="M0 100 L50 50 L0 66.6" fill="rgba(255,255,255, .5)"></path>
-						<path class="small right" d="M100 100 L50 50 L100 66.6" fill="rgba(255,255,255, .5)"></path>
-						<path d="M0 99.9 L50 49.9 L100 99.9 L0 99.9" fill="rgba(255,255,255, 1)"></path>
-						<path d="M48 52 L50 49 L52 52 L48 52" fill="rgba(255,255,255, 1)"></path>
-					</svg>
-				</div>
-			</div>
-		</header>
-		<div id="main" class="content">
-			<div class="container">
-				<article itemscope="itemscope">
-					<div class="posts-list js-posts">
-						<div class="post post-layout-list" data-aos="fade-up">
-							<div class="postnormal review ">
-								<div class="post-container review-item">
-									<div class="row review-item-wrapper">
-										<div class="col-sm-3">
-											<a rel="nofollow" href="detail">
-												<div class="review-item-img" style="background-image: url(../static/images/diego-ph-249471-2-800x1000.jpg);"></div>
-											</a>
-										</div>
-										<div class="col-sm-9 flex-xs-middle">
-											<div class="review-item-title">
-												<a href="detail" rel="bookmark" th:text="${data}">我才不会写年终总结之瞎说篇</a>
-											</div>
-											<div class="review-item-creator"><b>发布日期：</b>2017-12-30</div>
-											<span class="review-item-info"><b>总浏览量：</b>1203 reads</span>
-										</div>
-									</div>
-									<div class="review-bg-wrapper">
-										<div class="bg-blur" style="background-image: url(../static/images/diego-ph-249471-2-800x1000.jpg);"></div>
-									</div>
-								</div>
-								<div class="post-container">
-									<div class="entry-content">确实讨厌去写所谓的年终总结，在公司已经被动的想领导上交一个总结，自己就懒得去总结，不然，我觉得脑子里应该会编写出八九不离十的内容，所以正经八儿的事情略了，瞎说一下。 年初的人事调动是个人最不能接受的事情，但不接受也得接受，老板一句“这是命令...</div>
-									<div class="post-footer">
-										<a class="gaz-btn primary" href="">READ MORE</a>
-										<span class="total-comments-on-post pull-right"><a href="">31 Comments</a></span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- post-formats end Infinite Scroll star -->
-					<!-- post-formats -->
-					<div class="pagination js-pagination">
-						<div class="js-next pagination__load">
-							<a href=""><i class="iconfont">&#xe605;</i></a>
-						</div>
-					</div>
-					<!-- -pagination  -->
-			</div>
-		</div>
+<!-- source http://www.scnoob.com More templates http://www.scnoob.com/moban.html -->
+<head>
+    <title>一个菜鸟攻城狮的博客</title>
+    <!-- META TAGS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- CSS FILES -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../static/css/fontawesome.css" rel="stylesheet" type="text/css">
+    <link href="../static/css/style.css" rel="stylesheet" type="text/css">
+</head>
 
-		<footer id="footer" class="overlay animated from-top">
-			<div class="decor-wrapper">
-				<svg id="footer-decor" class="decor top" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100" preserveAspectRatio="none">
-					<path class="large left" d="M0 0 L50 50 L0 100" fill="rgba(255,255,255, .1)"></path>
-					<path class="large right" d="M100 0 L50 50 L100 100" fill="rgba(255,255,255, .1)"></path>
-					<path class="medium left" d="M0 0 L50 50 L0 66.6" fill="rgba(255,255,255, .3)"></path>
-					<path class="medium right" d="M100 0 L50 50 L100 66.6" fill="rgba(255,255,255, .3)"></path>
-					<path class="small left" d="M0 0 L50 50 L0 33.3" fill="rgba(255,255,255, .5)"></path>
-					<path class="small right" d="M100 0 L50 50 L100 33.3" fill="rgba(255,255,255, .5)"></path>
-					<path d="M0 0 L50 50 L100 0 L0 0" fill="rgba(255,255,255, 1)"></path>
-					<path d="M48 48 L50 51 L52 48 L48 48" fill="rgba(255,255,255, 1)"></path>
-				</svg>
-			</div>
-			<div class="socialize" data-aos="zoom-in">
-				<li>
-					<a title="weibo" class="socialicon" href=""><i class="iconfont" aria-hidden="true">&#xe601;</i></a>
-				</li>
-				<li class="wechat">
-					<a class="socialicon"><i class="iconfont">&#xe609;</i></a>
-					<div class="wechatimg"><img src="../static/images/49D3746D-7519-B709-83E4-65BD1927C4E7.jpg"></div>
-				</li>
-				<li>
-					<a title="QQ" class="socialicon" href="" target="_blank"><i class="iconfont" aria-hidden="true">&#xe616;</i></a>
-				</li>
-			</div>
-			<div class="cr">
-				Copyright&copy;2018. Design by
-				<a href="">17sucai</a>
-			</div>
-			<script type='text/javascript' src='../static/js/jquery.min.js'></script>
-			<script type='text/javascript' src='../static/js/plugins.js'></script>
-			<script type='text/javascript' src='../static/js/script.js'></script>
-			<script type='text/javascript' src='../static/js/particles.js'></script>
-			<script type='text/javascript' src='../static/js/aos.js'></script>
-		</footer>
-	</body>
+<body>
+    <!-- READING POSITION INDICATOR -->
+    <progress value="0" id="eskimo-progress-bar">
+        <span class="eskimo-progress-container">
+            <span class="eskimo-progress-bar"></span>
+        </span>
+    </progress>
+    <!-- SITE WRAPPER -->
+    <div id="eskimo-site-wrapper">
+        <!-- MAIN CONTAINER -->
+        <main id="eskimo-main-container">
+            <div class="container">
+                <!-- SIDEBAR -->
+                <div id="eskimo-sidebar">
+                    <div id="eskimo-sidebar-wrapper" class="d-flex align-items-start flex-column h-100 w-100">
+                        <!-- LOGO -->
+                        <div id="eskimo-logo-cell" class="w-100">
+                            <a class="eskimo-logo-link" href="index">
+                                <img src="../static/images/logo.png" class="eskimo-logo" alt="eskimo" />
+                            </a>
+                        </div>
+                        <!-- MENU CONTAINER -->
+                        <div id="eskimo-sidebar-cell" class="w-100">
+                            <!-- MOBILE MENU BUTTON -->
+                            <div id="eskimo-menu-toggle">MENU</div>
+                            <!-- MENU -->
+                            <nav id="eskimo-main-menu" class="menu-main-menu-container">
+                                <ul class="eskimo-menu-ul">
+                                    <li><a href="#">主页</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- SOCIAL MEDIA ICONS -->
+                        <!--<div id="eskimo-social-cell" class="mt-auto w-100">-->
+                            <!--<div id="eskimo-social-inner">-->
+                                <!--<ul class="eskimo-social-icons">-->
+                                    <!--<li><a href="#"><i class="fa fa-facebook-f"></i></a></li>-->
+                                    <!--<li><a href="#"><i class="fa fa-twitter"></i></a></li>-->
+                                    <!--<li><a href="#"><i class="fa fa-google-plus"></i></a></li>-->
+                                    <!--<li><a href="#"><i class="fa fa-instagram"></i></a></li>-->
+                                    <!--<li><a href="#"><i class="fa fa-vimeo"></i></a></li>-->
+                                <!--</ul>-->
+                                <!--<div class="clearfix"></div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+                <!-- TOP ICONS -->
+                <ul class="eskimo-top-icons">
+                    <li id="eskimo-panel-icon">
+                        <a href="#eskimo-panel" class="eskimo-panel-open"><i class="fa fa-bars"></i></a>
+                    </li>
+                    <li id="eskimo-search-icon">
+                        <a id="eskimo-open-search" href="#"><i class="fa fa-search"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+                <div class="row">
+                    <!-- BLOG POSTS -->
+                    <div class="col-12 col-lg-7">
+                        <div class="eskimo-masonry-grid">
+                            <div class="eskimo-one-column" data-columns>
+                                <!-- POST 1 -->
+                                <div class="card-masonry" th:each="article : ${aracleInfo.data}">
+                                    <div class="card">
+                                        <a href="singlePost">
+                                            <img class="card-vertical-img" th:src="${article.imgUrl}" alt="Ketchup Flavored Ice Cream!" />
+                                        </a>
+                                        <div class="card-border">
+                                            <div class="card-body">
+                                                <div class="card-category">
+                                                    <span><a href="category.html">Food &amp; Drink</a></span>
+                                                </div>
+                                                <h3 class="card-title">
+                                                    <a href="singlePost" th:text="${article.title}"></a>
+                                                </h3>
+                                                <p th:text="${article.summary}"></p>
+                                            </div>
+                                            <div class="card-footer">
+                                                <div class="eskimo-author-meta">
+                                                    By <a class="author-meta" href="author.html">Egemenerd</a>
+                                                </div>
+                                                <div class="eskimo-date-meta">
+                                                    <a href="singlePost">May 28, 2018</a>
+                                                </div>
+                                                <div class="eskimo-reading-meta">3 min read</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="eskimo-pager">
+                            <ul class='pagination flex-wrap'>
+                                <li class='page-item active'><a class='page-link' href='#'>i</a></li>
+                                <li class='page-item'><a class='page-link' href='#'>2</a></li>
+                                <li class='page-item'><a class='page-link' href='#'>3</a></li>
+                                <li class='page-item'><a class='page-link' href="#"><i class="fa fa-chevron-right"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- SIDEBAR -->
+                    <div class="col-12 col-lg-5">
+                        <!-- AUTHOR BOX -->
+                        <div class="eskimo-author-box eskimo-add-border eskimo-widget">
+                            <div class="eskimo-author-img">
+                                <img src="http://img.mp.itc.cn/upload/20170620/6beb288ac08c420fa38f84c0d5dd63ed_th.jpg"/>
+                            </div>
+                            <h3><span>SopLong</span></h3>
+                            <p class="eskimo-author-subtitle">WEB DESIGNER &amp; DEVELOPER</p>
+                            <p class="eskimo-author-description">I'm a Web Developer and Designer with a strong passion for UX/UI design. I have experience building websites, web applications, and brand assets. Contact me if you have any questions!</p>
+                            <!--<div class="eskimo-author-box-btn">-->
+                                <!--<a class="btn btn-default" href="about">CONTACT ME</a>-->
+                            <!--</div>-->
+                        </div>
+                        <!-- CATEGORIES -->
+                        <div class="eskimo-categories eskimo-widget">
+                            <h5 class="eskimo-title-with-border"><span>Categories</span></h5>
+                            <ul>
+                                <li>
+                                    <a href="category.html" title="The best restaurants, cafes, bars and shops in town.">Food &amp; Drink</a> <span class="badge badge-pill badge-default">5</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- POPULAR POSTS -->
+                        <div class="eskimo-post-list-wrapper eskimo-widget">
+                            <h5 class="eskimo-title-with-border"><span>Popular Posts</span></h5>
+                            <!-- POST 1 -->
+                            <div class="eskimo-post-list">
+                                <div class="eskimo-post-list-left">
+                                    <a href="singlePost">
+                                        <img src="http://eskimo.egemenerd.com/wp-content/uploads/2018/05/blog19-150x150.jpg" alt="5 Ways to a Healthy Lifestyle" />   
+                                    </a>
+                                </div>
+                                <div class="eskimo-post-list-right">
+                                    <p class="eskimo-post-list-title">
+                                        <a href="singlePost">5 Ways to a Healthy Lifestyle</a>
+                                    </p>
+                                    <div class="eskimo-post-list-info">
+                                        <i class="fa fa-clock-o"></i><a href="singlePost">May 25, 2018</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- BANNER -->
+                        <div class="eskimo-widget">
+                            <a href="https://themeforest.net/user/egemenerd/portfolio">	
+                                <img src="http://eskimo.egemenerd.com/wp-content/uploads/2018/05/banner.png" alt="banner" class="img-fluid mx-auto d-block" />
+                            </a>
+                        </div>
+                        <!-- TAGS -->
+                        <div class="eskimo-widget">
+                            <h5 class="eskimo-title-with-border"><span>Tags</span></h5>
+                            <div class="eskimo-tag-cloud">
+                                <a href="category.html">aute<span>7</span></a>
+                                <a href="category.html">enim<span>7</span></a>
+                                <a href="category.html">commodo<span>7</span></a>
+                                <a href="category.html">voluptatibus<span>7</span></a>
+                                <a href="category.html">culpa<span>7</span></a>
+                                <a href="category.html">offendit<span>7</span></a>
+                                <a href="category.html">magna<span>7</span></a>
+                                <a href="category.html">quorum<span>7</span></a>
+                                <a href="category.html">mandaremus<span>7</span></a>
+                                <a href="category.html">ingeniis<span>7</span></a>
+                                <a href="category.html">tempor<span>7</span></a>
+                                <a href="category.html">summis<span>7</span></a>
+                                <a href="category.html">consequat<span>6</span></a>
+                                <a href="category.html">iudicem<span>6</span></a>
+                                <a href="category.html">expetendis<span>6</span></a>
+                                <a href="category.html">deserunt<span>6</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!--&lt;!&ndash; FOOTER &ndash;&gt;-->
+        <!--<footer id="eskimo-footer">-->
+            <!--<div class="container">-->
+                <!--<div class="row eskimo-footer-wrapper">-->
+                    <!--&lt;!&ndash; FOOTER WIDGET 1 &ndash;&gt;-->
+                    <!--<div class="col-12 col-lg-6 mb-4 mb-lg-0">-->
+                        <!--<h5 class="eskimo-title-with-border"><span>About Me</span></h5>-->
+                        <!--<p>Trusted by thousands of customers, my unique themes and plugins help you make beautiful responsive web sites with ease.</p>-->
+                        <!--<p><a href="about" class="btn btn-default">Read More</a></p>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash; FOOTER WIDGET 2 &ndash;&gt;-->
+                    <!--<div class="col-12 col-lg-6">-->
+                        <!--<h5 class="eskimo-title-with-border"><span>Newsletter</span></h5>-->
+                        <!--<form method="post" action="index.html">-->
+                            <!--<label>Subscribe to our mailing list!</label>-->
+                            <!--<div class="input-group">-->
+                                <!--<input type="email" class="form-control" name="EMAIL" placeholder="Your email address" required />-->
+                                <!--<div class="input-group-append">-->
+                                    <!--<input type="submit" value="Sign up" class="btn btn-default" />-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</form>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; CREDITS &ndash;&gt;-->
+                <!--<div class="eskimo-footer-credits">-->
+                    <!--<p>-->
+                        <!--Made with love by Egemenerd More Templates <a href="http://www.scnoob.com">菜鸟素材</a> - Collect from <a href="http://www.scnoob.com/moban.html">网页模板</a>-->
+                    <!--</p>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</footer>-->
+    </div>
+    <!-- GO TO TOP BUTTON -->
+    <a id="eskimo-gototop" href="#"><i class="fa fa-chevron-up"></i></a>
+    <!-- SLIDE PANEL OVERLAY -->
+    <div id="eskimo-overlay"></div>
+    <!-- SLIDE PANEL -->
+    <div id="eskimo-panels">
+        <aside id="eskimo-panel" class="eskimo-panel">
+            <div class="eskimo-panel-inner">
+                <!-- CLOSE SLIDE PANEL BUTTON -->
+                <a href="#" class="eskimo-panel-close"><i class="fa fa-times"></i></a>
+                <!-- AUTHOR BOX -->
+                <div class="eskimo-author-box eskimo-widget">
+                    <div class="eskimo-author-img">
+                        <img src="http://eskimo.egemenerd.com/wp-content/uploads/2018/05/img.jpg" alt="JOHN DOE" />
+                    </div>
+                    <h3><span>JOHN DOE</span></h3>
+                    <p class="eskimo-author-subtitle">WEB DESIGNER &amp; DEVELOPER</p>
+                    <p class="eskimo-author-description">I'm a Web Developer and Designer with a strong passion for UX/UI design. I have experience building websites, web applications, and brand assets. Contact me if you have any questions!</p>
+                    <div class="eskimo-author-box-btn">
+                        <a class="btn btn-default" href="about">CONTACT ME</a>
+                    </div>
+                </div>
+                <!-- RECENT POSTS -->
+                <div class="eskimo-recent-entries eskimo-widget">
+                    <h5 class="eskimo-title-with-border"><span>Recent Posts</span></h5>
+                    <ul>
+                        <li>
+                            <a href="singlePost">Ketchup Flavored Ice Cream!</a>
+                            <span class="post-date">May 28, 2018</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- CATEGORIES -->
+                <div class="eskimo-categories eskimo-widget">
+                    <h5 class="eskimo-title-with-border"><span>Categories</span></h5>
+                    <ul>
+                        <li>
+                            <a href="category.html" title="The best restaurants, cafes, bars and shops in town.">Food &amp; Drink</a> <span class="badge badge-pill badge-default">5</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- TAGS -->
+                <div class="eskimo-widget">
+                    <h5 class="eskimo-title-with-border"><span>标签</span></h5>
+                    <div class="eskimo-tag-cloud">
+                        <a href="category.html">aute<span>7</span></a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <!-- FULLSCREEN SEARCH -->
+    <div id="eskimo-fullscreen-search">
+        <div id="eskimo-fullscreen-search-content">
+            <a href="#" id="eskimo-close-search"><i class="fa fa-times"></i></a>
+            <form role="search" method="get" action="search.html" class="eskimo-lg-form">
+                <div class="input-group">
+                    <input type="text" class="form-control form-control-lg" placeholder="Enter a keyword..." name="s" />
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- JS FILES -->
+    <script src="../static/js/jquery-3.3.1.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/salvattore.min.js"></script>
+    <script src="../static/js/panel.js"></script>
+    <script src="../static/js/reading-position-indicator.js"></script>
+    <script src="../static/js/custom.js"></script>
+</body>
 
+
+<!-- source http://www.scnoob.com More templates http://www.scnoob.com/moban.html -->
 </html>

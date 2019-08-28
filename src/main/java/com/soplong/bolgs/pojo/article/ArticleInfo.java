@@ -41,4 +41,9 @@ public class ArticleInfo implements Serializable {
      * 删除标记 【0】正常 【1】删除
      */
     private Integer delFlag;
+
+    /**
+     * 图片地址
+     */
+    private String imgUrl;
 }
